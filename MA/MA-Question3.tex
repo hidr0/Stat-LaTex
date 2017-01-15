@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\title{Кратен интегран на Риман}
+
+\begin{document}
+
+\maketitle
+
+
+$$\tau=\{x_{i}\}_{i=0}^n \qquad a = x_{0} < x_{1} < .. < x_{n} = b $$
+$$\xi_{i}\in[x_{i-1},x_{i}] \qquad \sigma(f_{i};\xi) = \sum_{i=1}^{n} f(\xi_{i})  \Delta x_{i} $$
+$$\Delta x_{i} = |[x_{i-1},x_{i}]| = x_{i} - x_{i-1} \qquad i \in 1..n$$
+$$\delta_{\tau} = max\Delta x_{i} {( 1 <= i <= n)} \qquad \xi = \{\xi_{i}\}_{i=1}^n $$
+
+Определение: f(x) е интегруема върху интервала [a,b] ако $\exists I \in R : \forall \epsilon > 0 \; \exists \delta = \delta(\epsilon)>0 \; \forall \tau=\{x_{i}\}_{i=0}^n , \delta_{\tau} < \delta, \forall \xi = \{\xi_{i}\}_{i=1}^n , \xi \in [x_{i-i},x_{i}] i = 1..n$ \\
+
+$$ => |I - \sigma_{\tau}(f_{i} \xi)| < \epsilon \\ $$
+
+I - интеграл на Риман на функцията f(x) върху интервала [a,b] \\
+
+Нека функцията f(x) е дефинирана върху измеримо по Жордан множесто $\Omega \subset R^n \\$
+
+$x = (x_{1}, .. , x_{n}) \qquad \tau = \{ G_{i}\}_{i=1}^n, G_{i} \subset \Omega \; \forall i = 1..n \\$
+
+1) $\cup_{i=1}^n G_{i} = \Omega , G_{i}$ - измеримо по Жордан\\
+
+2) $G_{i} \cap G_{j} = \emptyset \forall i,j = 1..n \; i \neq j$ \\
+
+3) $\tau$ - разбиване на $\Omega \qquad \forall i = 1..n \; \xi_{i} \in G_{i}$ \\
+
+$\sigma_{\tau}(f_{i} \xi) = \sum_{i=1}^{n} f(\xi_{i})m(G_{i})$ - Сума на Риман \\
+
+Определени: U $\subset R^m, \rho$ - метрика.\\
+DiamU = sup$\rho(x,y)_{x,y \in U}$ - наричаме диаметър\\
+
+Определение: Големи на разбирането $\tau - \delta_{\tau} = maxdiam(G) \; 1 <= i <= n$
+
+Определени: Казваме, че f(x) е ингрируема по Риман върху $\Omega$, ако $\exists I \in R: \forall \epsilon>0 ;\ \exists \delta = \delta(\epsilon)<0: \forall \tau = \{G_{i}\}_{i=1}^n, \delta_{\tau} < \delta \; \forall \xi=\{\xi_{i}\}_{i=1}^n, \xi_{i} \in G_{i} \qquad i = 1..n \qquad |I - \sigma_{\tau}(f_{i} \xi| < \epsilon$
+
+Определение: f(x) е дефинирано върху измеримо по Жордан многжесто $\Omega \subset R^n: \; f(x) $ е съществено ограничена върху $\Omega$ ако $\exists G \subset \Omega$ с ЖМ нула, такова че : f(x) е ограничена върху $\Omega/G$ 
+\\
+Определение: f(x) е дефинирано върху измеримо по Жордан многжесто $\Omega \subset R^n: \; f(x) $ е съществено неограничена върху $\Omega$ ако $\exists G \subset \Omega$ с ЖМ нула, такова че : f(x) е неограничена върху $\Omega/G$\\
+
+Теорема: Ако f(x) е дефинирана върху измеримо по Жордан множесто $\Omega$ и е съществено неограничена върху $\Omega$ => f(x) не е интегрируема върху $\Omega$\\
+
+Доказателство: Heкa f(x) е съществено неограничена върху $\Omega$ и интегрируема по Риман върху $\Omega$ \\
+
+От това, че е интегрируема $ => \exists I \in R: \forall \epsilon > 0 \exists \delta = \delta_{epsilon} > 0: \forall \tau = \{G_{i}\}_{i=1}^n, \delta_{\tau} < \delta \; \forall \xi=\{\xi_{i}\}_{i=1}^n, \xi_{i} \in G_{i} \qquad i = 1..n \qquad |I - \sigma_{\tau}(f_{i} \xi| < \epsilon$ \\
+
+$ \epsilon = 1 \qquad \exists \delta_{1} > 0 : \forall \tau = \{G_{i}\}_{i=1}^n : \delta_{\tau} < \delta \; \forall \xi=\{\xi_{i}\}_{i=1}^n, \xi_{i} \in G_{i} \qquad i = 1..n $
+
+$$ |I- \sigma_{\tau}(f_{i} \xi) | < 1 $$
+
+$$ I - 1<= \sigma_{\tau}(f_{i} \xi) < I + 1 $$
+
+$$ I - 1< \sum_{i=1}^{n} f(\xi_{i})m(G_{i}) < I + 1 $$
+
+f(x) е съществено неограничена в G => $ \exists G_{i_{0}} \in \tau$ и $m(G_{i_{0}}) \neq 0 $: f(x) e неограничена върху $G_{i_{0}}$ \\
+
+За конкретно $G_{i_{0}}$ = $G_{1}$ \\
+
+=> f(x) е неограничена върху $G_{1}$ \\
+
+$$ I - 1< \sum_{i=1}^{n} f(\xi_{i})m(G_{i}) < I + 1 $$
+
+$$ I - 1< f(\xi_{1})m(G_{1})  + \sum_{i=2}^{n} f(\xi_{i})m(G_{i}) < I + 1 $$
+
+$$ \xi = \{ \xi_{1}, \xi_{2}^0,\xi_{3}^0, ... , \xi_{n}^0\} : \xi_{1} \in G_{1} \; ; \xi_{i}^0 \in G_{i} $$
+
+$$ I - 1< f(\xi_{1})m(G_{1})  + \sum_{i=2}^{n} f(\xi_{i})m(G_{i}) < I + 1 $$
+
+$$ \sum_{i=2}^{n} f(\xi_{i})m(G_{i}) = A $$
+
+$$ I - A - 1< f(\xi_{1})m(G_{1}) < I + 1 - A \qquad \forall \xi_{1} \in G_{1} : m(G_{1}) \neq 0 $$
+
+$$ \frac{I - A - 1}{m(G_{1})}< f(\xi_{1}) < \frac{I + 1 - A}{m(G_{1})} $$
+
+
+
+
+
+\end{document}

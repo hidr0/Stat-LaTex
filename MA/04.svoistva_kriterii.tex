@@ -1,0 +1,199 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\title{Критерий за интегрируемост и свойства}
+
+\begin{document}
+
+f(x) е дефинирано и ограничено в/у измер по Ж мн-во $\Omega$ 
+$$
+\tau=\{G_i\}_{i=1}^{n} -Razbivane-na-omega \Omega
+$$
+$$
+1)G_{i}-izmerimo-po-Jordan Ж 
+$$
+$$
+2)G_{i} \bigcap G_{j}= \emptyset, \forall  i, j = 1, 2, .. n; i != j
+$$
+$$
+3)\bigcup_{i=1}^{n} = \Omega
+$$
+$$
+m_{i}=\inf_{x \in  G_{i}} f(x)
+$$
+$$
+M_{i}=\sup_{x \in  G_{i}} f(x)
+$$
+$$
+s=\sum_{i=1}^{n} m_{i}m(G_{i}) 
+$$
+$$
+S=\sum_{i=1}^{n} M_{i}m(G_{i}) 
+$$
+
+Свойство 1:
+$$
+\forall \tau=\{G_{i}\}_{i=1}^n \xi=\{\xi_{i}\}_{i=1}^{n}, \xi_i \in G_{i} \forall i = 1,2,..,n
+$$
+$$
+=>s\tau=\sum_{i=1}^{n} f(\xi_i)*m(G_{i})
+$$
+
+Дока-во:\\
+$\forall i=1,2,...,n m_{i}<=f(\xi_{i})<=M_{i}, (\xi_{i} \in G_{i})$\\
+$=> \forall i = 1, 2, .... , n \\ m_{i}m(G_{i})<=f(\xi_{i})m(G_{i})<=M_{i}m(G_{i})$ \\
+$\sum_{i=1}^{n} m_{i}m(G_{i})<= \sum_{i=1}^{n} f(\xi_{i})m(G_{i})<= \sum_{i=1}^{n} M_{i}m(G_{i}) $ \\
+$s_{\tau}<= \sum_{i=1}^{n} f(\xi_{i})m(G_{i})<= S_{\tau} $
+
+
+Свойство 2: \\
+$$
+s_{\tau}=\inf_{\xi} \sigma_{\tau}(fi \xi)
+$$
+$$
+S_{i}=\sup_{\xi} f(x)
+$$
+Доказателство:
+
+$$
+s_{\tau}=\inf_{\xi} \sigma_{\tau}(fi \xi)
+\tau=\{G_{i}\}_{i=1}^n
+$$
+
+$$
+s=\sum_{i=1}^{n} m_{i}m(G_{i}), \ m_i= \inf_{x \in G _{i}} f(x), \ \forall i = 1, 2, .., n
+\sigma_{\tau}(f_{i} \xi)= \sum_{i=1}^{n} f(\xi_{i})m(G_{i}), \ \forall i = 1, 2, ..., n
+\newline
+$$
+$$\forall  i = 1, 2, ..., n$$
+$$1)mi<=f(\xi_{i})$$
+$$\forall \epsilon > 0 \exists \xi_{i} \in G_{i} : f(\xi_i) < m_{i} + \epsilon$$
+$$f(\xi_i)m(G_{i}) < (m_{i} + \epsilon)m(G_{i})$$
+$$\sigma_{\tau}(f_{i} \xi)= \sum_{i=1}^{n} f(\xi_i)m(G_{i}) < \sum_{i=1}^{n}(m_{i} + \epsilon)m(G_{i})=\sum_{i=1}^{n}(m_{i})m(G_{i}) + \sum_{i=1}^{n}( \epsilon)m(G_{i})$$
+$$ \exists \sigma_{\tau}(f_{i} \xi) < s_{\tau} + \epsilon \sum_{i=1}^{n} m(G_{i})=s_{\tau}+ \epsilon m(\Omega)$$
+$$\sigma_{\tau}(f_{i}\xi)<s_{tau}+\epsilon m(\Omega)=>s_{tau}=inf_\xi \sigma(f_{i}\xi)$$
+
+Определение: \\
+$\tau= \{G_{i}\}_{i=1}^{n} \ \tau '= \{D_{j}\}_{j=1}^{n}$ - разбиване на $\Omega$ Казваме, че $\tau$' следва $\tau$, ако  $\forall_{j}$=1,2,3...,p $\exists$ i = 1,2,...,n: $D_{j} \subset G_{i}$
+
+Свойство 3:
+Ако $\tau$= $\{G_{i}\}_{i}^{n}$, $\tau'=\{D_{j}\}_{j=1}^{n}$ $\tau ' < \tau => s_{\tau} <= s_{\tau'} <= S_{\tau'} <= S_{\tau}$
+
+Доказателство:
+
+$$
+\tau ' < \tau = > \forall_{j}=1,2,...,p \exists i =1,2,3,...,n : D_{j} \subset G_{i}
+$$
+$$G_{i}=\sum_{D_{j} \subset G_{i}} D_{j}$$
+$$
+s_{\tau}= \sum_{i=1}^{n}m_{i} m(G_{i})= \sum_{i=1}^{n}m_{i} \sum_{D_{j} \subset G_{i}} m(D_{j}) = \sum_{i=1}^{n} \sum_{j=1}^{p} m'_{j}m(D_{j}) 
+$$
+$$
+m_{i}=\inf_{G_{i}} f(x)
+$$
+$$
+m_{i'}=\inf_{D_{j}} f(x)
+$$
+ако $D_{j} \subset G_{i} => m_{i} <= m'_{j}$
+$$\sum_{i=1}^{n}m_{i} \sum_{D_{j} \subset G_{i}} m(D_{j})<=\sum_{i=1}^{n}m_{i} \sum_{D_{j} \subset G_{i}} m(D_{j})m'_{j}m(D_{j})= \sum_{j=1}^{p}m'_{j}m(D_{j})=s_{\tau'}$$
+
+Свойство 4:
+$\forall$ $\tau, \tau'$- разбивания на измеримо по Ж. мн-во $\Omega$ => $s_{\tau}<=S_{\tau'}$
+Доказателство:
+
+$$
+\tau= \{G_{i}\}_{i=1}^{n}
+$$
+
+$$
+\tau'= \{D_{j}\}_{j=1}^{p}
+$$
+
+
+$$
+\tau=\{\{G_{i}\}_{i=1}^{n} \cap \{D_{j}\}_{j=1}^{p}   \}, i=1,2,..,n ; j=1,2,3...,p
+$$
+
+$$
+\tau''<\tau
+$$
+
+$$
+\tau''<\tau'
+$$
+
+$$
+s_{\tau} <= s_{\tau''} <= S_{\tau''} <= S_{\tau'} 
+$$
+
+$$
+s_{\tau} <= S_{\tau'} 
+$$
+
+Свойство 5:
+$$\exists \sup_{\tau} s_{\tau} = \underline{I}$$
+$$\exists \inf_{\tau} S_{\tau} = \overline{I}$$
+$$s_{\tau} <=  \underline{I} <= \overline{I} <= S_{\tau}, \forall \tau$$
+Доказателство:
+
+от миналото св-во имаме, че:
+$$s_{\tau} <= S_{\tau'}$$
+$$ \forall \tau : s_{\tau} <= S_{\tau'} \{ s_{\tau} : \tau \} -e-ogranicheno-otgore => \sup_{\tau} s_{\tau} = \underline{I} $$
+$$=> \underline{I} <= s_{\tau'}=> \{ s_{\tau': \tau} e-ogranichena-otdole \} $$
+$$=>\inf_{\tau} S_{\tau} = \overline{I}$$
+$$=>\underline{I} <= \overline{I}$$
+
+Критерий за интегрируемост - f(x) e интегрируема по Риман в/у изм. по Ж мн-во $\Omega \subset R^{n}$ <=> $\forall \epsilon>0 \exists \delta =\delta ( \epsilon )>0: \forall \tau = \{ G_{i} \}_{i}^{n}, \delta_{\tau} < \delta => S_{\tau} - s_{\tau} < \epsilon$
+
+Доказателство:
+
+В едната посока от ляво на дясно:
+
+Нека f(x) e интегрируема по Риман в/у  $\Omega$ => $\exists I \in R: \forall \epsilon >0 \exists \delta=\delta(\epsilon)>0: \forall \tau = \{G_{i}\}_{i=1}^{n}, \delta_{\tau}<\delta, \forall \xi=\{\xi_{i}\}_{i=1}^{n}, \xi+{i} \in G_{i} i =1, 2,3 ,,. ,n=> |I- \sigma_{\tau}(fi\xi)|< \epsilon$
+$$
+I- \epsilon < \sigma_{\tau}(fi\xi)< I + \epsilon
+$$
+$$
+I- \epsilon <= s_{\tau} = \inf_{\xi}\sigma_{\tau}(fi\xi) <= \sup_{\xi} \sigma_{\tau}(fi\xi) = S_{\tau}< I + \epsilon
+$$
+$$
+I- \epsilon <=s_{\tau} <= S_{\tau} <= I + \epsilon
+$$
+$$
+S_{\tau} <= I + \epsilon
+$$
+
+$$
+s_{\tau} <= -I + \epsilon
+$$
+$$S_{\tau} -s_{\tau} <= 2 \epsilon
+$$
+
+Доказателство в обратната посока:
+Нека $\forall \epsilon >=0 \exists \delta=\delta(\epsilon)>0: \forall \tau= \{G_{i}\}_{i=1}^{n}, \delta_{\tau}<\delta=>S_{\tau}-s_{\tau)}<\epsilon$
+$$
+s_{\tau}<= \underline{I} <= \overline{I}  <= S_{\tau}
+$$
+$$
+0<= \overline{I} - \underline{I}  <= S_{\tau} -s_{\tau} < \epsilon
+$$
+$$
+0<= \overline{I} - \underline{I} < \epsilon
+$$
+$$
+=>  \overline{I} = \underline{I}
+$$
+$$s_{\tau} <= \sigma_{\tau}(fi\xi) <= S_{\tau}$$
+$$s_{\tau} <= I <= S_{\tau}$$
+
+като от 1вото издавим 2рото:
+$$
+\sigma_{\tau}(fi\xi)-I <= S_{\tau}-s_{\tau}
+$$
+$$
+\exists I: \forall \epsilon > 0, \exists \delta=\delta(\epsilon) > 0 \forall \tau = \{G_{i}\}_{i=1}^{n},\delta_{\tau}<\delta, \forall \xi=\{\xi_{i}\}_{i=1}^{n}, \xi_{i} \in G_{i}, i = 1,2,...,n
+=> |\sigma(fi\xi)-I| <= S_{\tau}-s_{\tau}< \epsilon
+$$
+=> f(x) e интегр. по Риман в/у $\Omega$
+\end{document}

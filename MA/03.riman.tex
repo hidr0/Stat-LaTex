@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\title{Кратен интегран на Риман}
+
+\begin{document}
+
+\maketitle
+
+
+$$\tau=\{x_{i}\}_{i=0}^n \qquad a = x_{0} < x_{1} < .. < x_{n} = b $$
+$$\xi_{i}\in[x_{i-1},x_{i}] \qquad \sigma(f_{i};\xi) = \sum_{i=1}^{n} f(\xi_{i})  \Delta x_{i} $$
+$$\Delta x_{i} = |[x_{i-1},x_{i}]| = x_{i} - x_{i-1} \qquad i \in 1..n$$
+$$\delta_{\tau} = max\Delta x_{i}( 1 <= i <= n) \qquad \xi = \{\xi_{i}\}_{i=1}^n $$
+
+Определение: f(x) е интегруема върху интервала [a,b] ако $\exists I \in R : \forall \epsilon > 0 \; \exists \delta = \delta(\epsilon)>0 \; \forall \tau=\{x_{i}\}_{i=0}^n , \delta_{\tau} < \delta, \forall \xi = \{\xi_{i}\}_{i=1}^n , \xi \in [x_{i-i},x_{i}] i = 1..n$ \\
+
+$$ => |I - \sigma_{\tau}(f_{i} \xi)| < \epsilon \\ $$
+
+I - интеграл на Риман на функцията f(x) върху интервала [a,b] \\
+
+Нека функцията f(x) е дефинирана върху  множесто $\Omega \subset R^n \\$
+
+$x = (x_{1}, .. , x_{n}) \qquad \tau = \{ G_{i}\}_{i=1}^n, G_{i} \subset \Omega \; \forall i = 1..n \\$
+
+1) $\cup_{i=1}^n G_{i} = \Omega , G_{i}$ - Измеримо по Жордан$\\$
+
+2) $G_{i} \cap G_{j} = \emptyset$$ prazno-mnojestno , \forall i,j = 1..n \; i != j$
+
+
+
+\end{document}
